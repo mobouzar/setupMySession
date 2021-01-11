@@ -41,13 +41,14 @@ sleep 3;
 
 echo "\n\033[33m----------- Downloading brew ... ----------\033[0m\n";
 sleep 3
+
 if [ ! -d "/goinfre/mobouzar/brew" ]
 then
 	curl -L https://github.com/Homebrew/brew/archive/1.9.0.tar.gz > /goinfre/mobouzar/brew1.9.0.tar.gz 2>/dev/null;
 	tar -xvzf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
 	rm -rf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
-	mv ./brew-1.9.0 /goinfre/mobouzar/brew1 &>/dev/null;
-	ln -s /goinfre/mobouzar/brew1 /Users/mobouzar 2> /dev/null;
+	mv ./brew-1.9.0 /goinfre/mobouzar/brew &>/dev/null;
+	ln -s /goinfre/mobouzar/brew /Users/mobouzar 2> /dev/null;
 	if [ -d "/Users/mobouzar/brew" ]
 	then
 		echo "\033[32m------- brew has been installed successfully -------\033[0m\n";
@@ -66,8 +67,9 @@ sleep 1;
 
 if [ ! -d "/goinfre/mobouzar/.PKInstallSandboxManager" ]
 then
-	mv .PKInstallSandboxManager /goinfre/mobouzar;
-	ln -s /goinfre/mobouzar/.PKInstallSandboxManager /Users/mobouzar 2> /dev/null;
+	mkdir /goinfre/mobouzar/.PKInstallSandboxManager
+	#mv .PKInstallSandboxManager /goinfre/mobouzar &> /dev/null;
+	#ln -s /goinfre/mobouzar/.PKInstallSandboxManager /Users/mobouzar 2> /dev/null;
 	echo "\033[32m------- PKInstallSandboxManager done -------\033[0m\n";
 	sleep 1;
 else
@@ -77,8 +79,9 @@ fi
 
 if [ ! -d "/goinfre/mobouzar/.mono" ]
 then
-	mv .mono /goinfre/mobouzar;
-	ln -s /goinfre/mobouzar/.mono /Users/mobouzar 2> /dev/null;
+	mkdir /goinfre/mobouzar/.mono
+	#mv .mono /goinfre/mobouzar &> /dev/null;
+	#ln -s /goinfre/mobouzar/.mono /Users/mobouzar 2> /dev/null;
 	echo "\033[32m------- mono done -------\033[0m\n";
 	sleep 1;
 else
@@ -88,8 +91,9 @@ fi
 
 if [ ! -d "/goinfre/mobouzar/.vscode" ]
 then
-	mv .vscode /goinfre/mobouzar;
-	ln -s /goinfre/mobouzar/.vscode /Users/mobouzar;
+	mkdir /goinfre/mobouzar/.vscode
+	#mv .vscode /goinfre/mobouzar &> /dev/null;
+	#ln -s /goinfre/mobouzar/.vscode /Users/mobouzar;
 	echo "\033[32m------- vscode done -------\033[0m\n";
 	sleep 1;
 else
