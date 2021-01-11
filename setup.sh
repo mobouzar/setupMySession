@@ -48,10 +48,18 @@ then
 	tar -xvzf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
 	rm -rf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
 	mv ./brew-1.9.0 /goinfre/mobouzar/brew &>/dev/null;
-	ln -s /goinfre/mobouzar/brew /Users/mobouzar 2> /dev/null;
-	if [ -d "/Users/mobouzar/brew" ]
+	if [ ! -d "/Users/mobouzar/brew" ]
+	then
+		ln -s /goinfre/mobouzar/brew /Users/mobouzar 2> /dev/null;
+	fi
+	if [ -d "/Users/mobouzar/brew" && -d "/goinfre/mobouzar/brew" ]
 	then
 		echo "\033[32m------- brew has been installed successfully -------\033[0m\n";
+		sleep 1;
+		echo "\033[32m------- updating Homebrew ... -------\033[0m\n";
+		brew update &> /dev/null
+		brew doctor &> /dev/null
+		echo "\033[32m------- brew has been updated successfully -------\033[0m\n";
 	else
 		echo "\033[31m------- brew has NOT been installed :( -------\033[0m\n";
 		exit 1;
@@ -62,38 +70,12 @@ fi
 
 # Make links for PKInstallSandboxManager mono vscode
 
-echo "\n\033[33m------- Make links for PKInstallSandboxManager mono vscode to goinfre -------\033[0m\n";
+echo "\n\033[33m------- Make links for vscode to goinfre -------\033[0m\n";
 sleep 1;
-
-if [ ! -d "/goinfre/mobouzar/.PKInstallSandboxManager" ]
-then
-	mkdir /goinfre/mobouzar/.PKInstallSandboxManager
-	#mv .PKInstallSandboxManager /goinfre/mobouzar &> /dev/null;
-	#ln -s /goinfre/mobouzar/.PKInstallSandboxManager /Users/mobouzar 2> /dev/null;
-	echo "\033[32m------- PKInstallSandboxManager done -------\033[0m\n";
-	sleep 1;
-else
-	echo "\033[32m------- PKInstallSandboxManager already linked -------\033[0m\n";
-	sleep 1;
-fi
-
-if [ ! -d "/goinfre/mobouzar/.mono" ]
-then
-	mkdir /goinfre/mobouzar/.mono
-	#mv .mono /goinfre/mobouzar &> /dev/null;
-	#ln -s /goinfre/mobouzar/.mono /Users/mobouzar 2> /dev/null;
-	echo "\033[32m------- mono done -------\033[0m\n";
-	sleep 1;
-else
-	echo "\033[32m------- mono already linked -------\033[0m\n";
-	sleep 1;
-fi
 
 if [ ! -d "/goinfre/mobouzar/.vscode" ]
 then
 	mkdir /goinfre/mobouzar/.vscode
-	#mv .vscode /goinfre/mobouzar &> /dev/null;
-	#ln -s /goinfre/mobouzar/.vscode /Users/mobouzar;
 	echo "\033[32m------- vscode done -------\033[0m\n";
 	sleep 1;
 else
