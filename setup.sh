@@ -1,4 +1,135 @@
 #!/bin/sh
+if [ ! -d "/goinfre/mobouzar/Application Support" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support";
+fi
+
+if [ ! -d "/goinfre/mobouzar/Application Support/AddressBook" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/AddressBook";
+fi
+
+if [ ! -d "/goinfre/mobouzar/Application Support/AndroidStudio4.0" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/AndroidStudio4.0";
+fi
+if [ ! -f "/goinfre/mobouzar/Application Support/Atom" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Atom";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/CallHistoryDB" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/CallHistoryDB";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/CallHistoryTransactions" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/CallHistoryTransactions";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/CloudDocs" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/CloudDocs";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Code" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Code";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/CoreParsec" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/CoreParsec";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/CrashReporter" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/CrashReporter";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/DiskImages" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/DiskImages";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Dock" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Dock";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Google" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Google";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/JREInstaller" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/JREInstaller";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Java" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Java";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Knowledge" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Knowledge";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Microsoft";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft AutoUpdate" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Microsoft AutoUpdate";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft Update Assistant" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Microsoft Update Assistant";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft Visual Studio" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Microsoft Visual Studio";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Mozilla" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Mozilla";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/OpenVR" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/OpenVR";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/Oracle" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/Oracle";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/SoapUI-5.6.0" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/SoapUI-5.6.0";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.ProtectedCloudStorage" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/com.apple.ProtectedCloudStorage";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.TCC" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/com.apple.TCC";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.backgroundtaskmanagementagent" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/com.apple.backgroundtaskmanagementagent";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.spotlight" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/com.apple.spotlight";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.touristd" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/com.apple.touristd";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/dmd" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/dmd";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/icdd" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/icdd";
+fi
+if [ ! -d "/goinfre/mobouzar/Application Support/videosubscriptionsd" ]
+then
+	mkdir "/goinfre/mobouzar/Application Support/videosubscriptionsd";
+fi
+
 
 # Clean the workspace
 Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B');
@@ -52,7 +183,7 @@ then
 	then
 		ln -s /goinfre/mobouzar/brew /Users/mobouzar 2> /dev/null;
 	fi
-	if [ -d "/Users/mobouzar/brew" && -d "/goinfre/mobouzar/brew" ]
+	if [[ ( -d "/Users/mobouzar/brew" ) && ( -d "/goinfre/mobouzar/brew" ) ]]
 	then
 		echo "\033[32m------- brew has been installed successfully -------\033[0m\n";
 		sleep 1;
@@ -81,6 +212,24 @@ then
 else
 	echo "\033[32m------- vscode already linked -------\033[0m\n";
 	sleep 1;
+fi
+
+# install node
+
+if [ ! -d "/goinfre/mobouzar/brew/Cellar/node" ]
+then
+	echo "\033[32m------- installing node ... -------\033[0m\n";
+	if [ -d "/goinfre/mobouzar/.npm" ]
+	then
+		rm -rf /Users/mobouzar/.npm &> /dev/null;
+	fi
+	brew install node &> /dev/null;
+	npm install -g npm@7.4.0 &> /dev/null;
+	mv /Users/mobouzar/.npm /goinfre/mobouzar/ &> /dev/null;
+	ln -s /goinfre/mobouzar/.npm /Users/mobouzar &> /dev/null;
+	echo "\033[32m------- node has been installed successfully -------\033[0m\n";
+else
+	echo "\033[32m------- Node already installed ! -------\033[0m\n";
 fi
 
 exit 0;
