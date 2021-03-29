@@ -12,7 +12,7 @@ if [ ! -d "/goinfre/mobouzar/Application Support/AndroidStudio4.0" ]
 then
 	mkdir "/goinfre/mobouzar/Application Support/AndroidStudio4.0";
 fi
-if [ ! -f "/goinfre/mobouzar/Application Support/Atom" ]
+if [ ! -d "/goinfre/mobouzar/Application Support/Atom" ]
 then
 	mkdir "/goinfre/mobouzar/Application Support/Atom";
 fi
