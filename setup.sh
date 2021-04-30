@@ -129,12 +129,11 @@ then
 	mkdir "/goinfre/mobouzar/Application Support/videosubscriptionsd";
 fi
 
-sleep 3;
+sleep 1;
 
 # Check and install brew
 
 echo "\n\033[33m----------- Downloading brew ... ----------\033[0m\n";
-sleep 3
 
 if [ ! -d "/goinfre/mobouzar/brew" ]
 then
@@ -159,6 +158,7 @@ then
 		exit 1;
 	fi
 else
+	sleep 1;
 	echo "\033[33m------- brew already installed -------\033[0m\n";
 fi
 
@@ -176,6 +176,26 @@ else
 	echo "\033[32m------- vscode already linked -------\033[0m\n";
 	sleep 1;
 fi
+
+# linking docker
+
+echo "\n\033[33m------- Make links for docker to goinfre -------\033[0m\n";
+sleep 1;
+
+if [ ! -d "/Users/mobouzar/goinfre/.docker" ]
+then
+	if [ ! -d "/Users/mobouzar/goinfre/Containers" ]
+	then
+		mkdir /Users/mobouzar/goinfre/Containers
+	fi
+	mkdir /Users/mobouzar/goinfre/.docker
+	echo "\033[32m------- docker done -------\033[0m\n";
+	sleep 1;
+else
+	echo "\033[32m------- docker already linked -------\033[0m\n";
+	sleep 1;
+fi
+
 
 # install node
 
