@@ -208,8 +208,6 @@ then
 	fi
 	brew install node &> /dev/null;
 	npm install -g npm@7.4.0 &> /dev/null;
-	mv /Users/mobouzar/.npm /goinfre/mobouzar/ &> /dev/null;
-	ln -s /goinfre/mobouzar/.npm /Users/mobouzar &> /dev/null;
 	echo "\033[32m------- node has been installed successfully -------\033[0m\n";
 else
 	echo "\033[32m------- Node already installed ! -------\033[0m\n";
