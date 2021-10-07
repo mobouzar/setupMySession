@@ -1,132 +1,138 @@
 #!/bin/sh
 
-if [ ! -d "/goinfre/mobouzar/Application Support" ]
+export SESSION=mobouzar
+
+if [ ! -d "/goinfre/$SESSION/AddressBook" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support";
+	mkdir "/goinfre/$SESSION/AddressBook";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/AddressBook" ]
+if [ ! -d "/goinfre/$SESSION/AndroidStudio4.0" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/AddressBook";
+	mkdir "/goinfre/$SESSION/AndroidStudio4.0";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/AndroidStudio4.0" ]
+if [ ! -d "/goinfre/$SESSION/Atom" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/AndroidStudio4.0";
+	mkdir "/goinfre/$SESSION/Atom";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Atom" ]
+if [ ! -d "/goinfre/$SESSION/CallHistoryDB" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Atom";
+	mkdir "/goinfre/$SESSION/CallHistoryDB";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/CallHistoryDB" ]
+if [ ! -d "/goinfre/$SESSION/CallHistoryTransactions" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/CallHistoryDB";
+	mkdir "/goinfre/$SESSION/CallHistoryTransactions";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/CallHistoryTransactions" ]
+if [ ! -d "/goinfre/$SESSION/CloudDocs" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/CallHistoryTransactions";
+	mkdir "/goinfre/$SESSION/CloudDocs";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/CloudDocs" ]
+if [ ! -d "/goinfre/$SESSION/Code" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/CloudDocs";
+	mkdir "/goinfre/$SESSION/Code";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Code" ]
+if [ ! -d "/goinfre/$SESSION/CoreParsec" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Code";
+	mkdir "/goinfre/$SESSION/CoreParsec";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/CoreParsec" ]
+if [ ! -d "/goinfre/$SESSION/CrashReporter" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/CoreParsec";
+	mkdir "/goinfre/$SESSION/CrashReporter";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/CrashReporter" ]
+if [ ! -d "/goinfre/$SESSION/DiskImages" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/CrashReporter";
+	mkdir "/goinfre/$SESSION/DiskImages";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/DiskImages" ]
+if [ ! -d "/goinfre/$SESSION/Dock" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/DiskImages";
+	mkdir "/goinfre/$SESSION/Dock";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Dock" ]
+if [ ! -d "/goinfre/$SESSION/Google" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Dock";
+	mkdir "/goinfre/$SESSION/Google";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Google" ]
+if [ ! -d "/goinfre/$SESSION/JREInstaller" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Google";
+	mkdir "/goinfre/$SESSION/JREInstaller";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/JREInstaller" ]
+if [ ! -d "/goinfre/$SESSION/Java" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/JREInstaller";
+	mkdir "/goinfre/$SESSION/Java";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Java" ]
+if [ ! -d "/goinfre/$SESSION/Knowledge" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Java";
+	mkdir "/goinfre/$SESSION/Knowledge";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Knowledge" ]
+if [ ! -d "/goinfre/$SESSION/Microsoft" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Knowledge";
+	mkdir "/goinfre/$SESSION/Microsoft";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft" ]
+if [ ! -d "/goinfre/$SESSION/Microsoft AutoUpdate" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Microsoft";
+	mkdir "/goinfre/$SESSION/Microsoft AutoUpdate";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft AutoUpdate" ]
+if [ ! -d "/goinfre/$SESSION/Microsoft Update Assistant" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Microsoft AutoUpdate";
+	mkdir "/goinfre/$SESSION/Microsoft Update Assistant";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft Update Assistant" ]
+if [ ! -d "/goinfre/$SESSION/Microsoft Visual Studio" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Microsoft Update Assistant";
+	mkdir "/goinfre/$SESSION/Microsoft Visual Studio";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Microsoft Visual Studio" ]
+if [ ! -d "/goinfre/$SESSION/Mozilla" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Microsoft Visual Studio";
+	mkdir "/goinfre/$SESSION/Mozilla";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Mozilla" ]
+if [ ! -d "/goinfre/$SESSION/OpenVR" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Mozilla";
+	mkdir "/goinfre/$SESSION/OpenVR";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/OpenVR" ]
+if [ ! -d "/goinfre/$SESSION/Oracle" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/OpenVR";
+	mkdir "/goinfre/$SESSION/Oracle";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/Oracle" ]
+if [ ! -d "/goinfre/$SESSION/SoapUI-5.6.0" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/Oracle";
+	mkdir "/goinfre/$SESSION/SoapUI-5.6.0";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/SoapUI-5.6.0" ]
+if [ ! -d "/goinfre/$SESSION/com.apple.ProtectedCloudStorage" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/SoapUI-5.6.0";
+	mkdir "/goinfre/$SESSION/com.apple.ProtectedCloudStorage";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.ProtectedCloudStorage" ]
+if [ ! -d "/goinfre/$SESSION/com.apple.TCC" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/com.apple.ProtectedCloudStorage";
+	mkdir "/goinfre/$SESSION/com.apple.TCC";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.TCC" ]
+if [ ! -d "/goinfre/$SESSION/com.apple.backgroundtaskmanagementagent" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/com.apple.TCC";
+	mkdir "/goinfre/$SESSION/com.apple.backgroundtaskmanagementagent";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.backgroundtaskmanagementagent" ]
+if [ ! -d "/goinfre/$SESSION/com.apple.spotlight" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/com.apple.backgroundtaskmanagementagent";
+	mkdir "/goinfre/$SESSION/com.apple.spotlight";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.spotlight" ]
+if [ ! -d "/goinfre/$SESSION/com.apple.touristd" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/com.apple.spotlight";
+	mkdir "/goinfre/$SESSION/com.apple.touristd";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/com.apple.touristd" ]
+if [ ! -d "/goinfre/$SESSION/dmd" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/com.apple.touristd";
+	mkdir "/goinfre/$SESSION/dmd";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/dmd" ]
+if [ ! -d "/goinfre/$SESSION/icdd" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/dmd";
+	mkdir "/goinfre/$SESSION/icdd";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/icdd" ]
+if [ ! -d "/goinfre/$SESSION/videosubscriptionsd" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/icdd";
+	mkdir "/goinfre/$SESSION/videosubscriptionsd";
 fi
-if [ ! -d "/goinfre/mobouzar/Application Support/videosubscriptionsd" ]
+if [ ! -d "/goinfre/$SESSION/azuredatastudio" ]
 then
-	mkdir "/goinfre/mobouzar/Application Support/videosubscriptionsd";
+	mkdir "/goinfre/$SESSION/azuredatastudio";
+fi
+if [ ! -d "/goinfre/$SESSION/discord" ]
+then
+	mkdir "/goinfre/$SESSION/discord";
 fi
 
 sleep 1;
@@ -135,17 +141,17 @@ sleep 1;
 
 echo "\n\033[33m----------- Downloading brew ... ----------\033[0m\n";
 
-if [ ! -d "/goinfre/mobouzar/brew" ]
+if [ ! -d "/goinfre/$SESSION/brew" ]
 then
-	curl -L https://github.com/Homebrew/brew/archive/1.9.0.tar.gz > /goinfre/mobouzar/brew1.9.0.tar.gz 2>/dev/null;
-	tar -xvzf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
-	rm -rf /goinfre/mobouzar/brew1.9.0.tar.gz &>/dev/null;
-	mv ./brew-1.9.0 /goinfre/mobouzar/brew &>/dev/null;
-	if [ ! -d "/Users/mobouzar/brew" ]
+	curl -L https://github.com/Homebrew/brew/archive/1.9.0.tar.gz > /goinfre/$SESSION/brew1.9.0.tar.gz 2>/dev/null;
+	tar -xvzf /goinfre/$SESSION/brew1.9.0.tar.gz &>/dev/null;
+	rm -rf /goinfre/$SESSION/brew1.9.0.tar.gz &>/dev/null;
+	mv ./brew-1.9.0 /goinfre/$SESSION/brew &>/dev/null;
+	if [ ! -d "/Users/$SESSION/brew" ]
 	then
-		ln -s /goinfre/mobouzar/brew /Users/mobouzar 2> /dev/null;
+		ln -s /goinfre/$SESSION/brew /Users/$SESSION 2> /dev/null;
 	fi
-	if [[ ( -d "/Users/mobouzar/brew" ) && ( -d "/goinfre/mobouzar/brew" ) ]]
+	if [[ ( -d "/Users/$SESSION/brew" ) && ( -d "/goinfre/$SESSION/brew" ) ]]
 	then
 		echo "\033[32m------- brew has been installed successfully -------\033[0m\n";
 		sleep 1;
@@ -167,9 +173,9 @@ fi
 echo "\n\033[33m------- Make links for vscode to goinfre -------\033[0m\n";
 sleep 1;
 
-if [ ! -d "/goinfre/mobouzar/.vscode" ]
+if [ ! -d "/goinfre/$SESSION/.vscode" ]
 then
-	mkdir /goinfre/mobouzar/.vscode
+	mkdir /goinfre/$SESSION/.vscode
 	echo "\033[32m------- vscode done -------\033[0m\n";
 	sleep 1;
 else
@@ -182,13 +188,13 @@ fi
 echo "\n\033[33m------- Make links for docker to goinfre -------\033[0m\n";
 sleep 1;
 
-if [ ! -d "/Users/mobouzar/goinfre/.docker" ]
+if [ ! -d "/Users/$SESSION/goinfre/.docker" ]
 then
-	if [ ! -d "/Users/mobouzar/goinfre/Containers" ]
+	if [ ! -d "/Users/$SESSION/goinfre/Containers" ]
 	then
-		mkdir /Users/mobouzar/goinfre/Containers
+		mkdir /Users/$SESSION/goinfre/Containers
 	fi
-	mkdir /Users/mobouzar/goinfre/.docker
+	mkdir /Users/$SESSION/goinfre/.docker
 	echo "\033[32m------- docker done -------\033[0m\n";
 	sleep 1;
 else
@@ -199,12 +205,12 @@ fi
 
 # install node
 
-if [ ! -d "/goinfre/mobouzar/brew/Cellar/node" ]
+if [ ! -d "/goinfre/$SESSION/brew/Cellar/node" ]
 then
 	echo "\033[32m------- installing node ... -------\033[0m\n";
-	if [ -d "/goinfre/mobouzar/.npm" ]
+	if [ -d "/goinfre/$SESSION/.npm" ]
 	then
-		rm -rf /Users/mobouzar/.npm &> /dev/null;
+		rm -rf /Users/$SESSION/.npm &> /dev/null;
 	fi
 	brew install node &> /dev/null;
 	npm install -g npm@7.4.0 &> /dev/null;
